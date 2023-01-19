@@ -27,17 +27,14 @@ $filas=mysqli_num_rows($resultado);
 
 if ($filas) 
 {
-    header("location:home.php");
+    header("location:entrada.php");
 }
 else
 {
-    ?>
-    <?php
-    include("index.php");
-    ?>
-    <h2>Usuario ó Contraseña incorrectos </h2>
-    <h2>Verifique su información</h2>
-    <?php
+   echo'<script type="text/javascript">
+        alert("Verifique su Información");
+        window.location.href="index.php";
+        </script>';
 }
 mysqli_free_result($resultado);
 mysqli_close($conexion);
