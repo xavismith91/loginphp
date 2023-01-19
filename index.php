@@ -7,9 +7,6 @@
 }
 
 </style>
-
-
-
 <html  lang="es">
 
 <head>
@@ -26,8 +23,4 @@
     <input type="submit" value="ingreso">
     </form>
 </body>
-
-
-
-
 </html>
