@@ -15,11 +15,11 @@ include('db.php');
 $conexion=mysqli_connect("localhost","root","","test");
 
 //hacemos la consulta a la base de datos para obtener los datos del ususario con su contraseña por medio de una variable 
-$consulta="SELECT*FROM login where usuario='usuario1' and password='usuario123'";
+$consulta="SELECT*FROM login where usuario='$usuario' and password='$password'";
 
 //el resultado de la consulta se guardara en la variable "resultado"
 
-$resultado = mysqli_query($conexion, $consulta);
+$resultado=mysqli_query($conexion, $consulta);
 
 //en el siguiente método recibirá la cantidad de fias de la consulta anterior en caso de tener contenido despliega el acceso al inicio si no declina la operacion
 
@@ -27,13 +27,16 @@ $filas=mysqli_num_rows($resultado);
 
 if ($filas) 
 {
-    header("location:/home.php");
-}else{
+    header("location:home.php");
+}
+else
+{
     ?>
     <?php
     include("index.php");
     ?>
-    <h1>ERROR EN LA AUTENTICACION </h1>
+    <h2>Usuario ó Contraseña incorrectos </h2>
+    <h2>Verifique su información</h2>
     <?php
 }
 mysqli_free_result($resultado);

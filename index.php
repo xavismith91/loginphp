@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html  lang="en">
+<html  lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,14 +8,12 @@
     <title>Login</title>
 </head>
 <body>
-
+    
     <form action="validar.php" method="POST">
     <h1>Login</h1>
     <p>Usuario<input type="text" placeholder="Ingresa tu nombre" name="usuario"></p>
-    <p>Constraseña <input type="text" placeholder="Ingresa tu contraseña " name="password"> </p>
+    <p>Constraseña <input type="password" placeholder="Ingresa tu contraseña " name="password"> </p>
     <input type="submit" value="ingreso">
-
-
     </form>
 </body>
 
